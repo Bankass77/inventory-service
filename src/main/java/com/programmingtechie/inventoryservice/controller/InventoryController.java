@@ -2,12 +2,14 @@ package com.programmingtechie.inventoryservice.controller;
 
 import com.programmingtechie.inventoryservice.service.InventoryService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/inventory")
+@RefreshScope
 public class InventoryController {
 
     private final InventoryService inventoryService;
